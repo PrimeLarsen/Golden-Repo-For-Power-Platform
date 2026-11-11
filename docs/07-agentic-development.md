@@ -27,6 +27,17 @@ This is the pattern known as **context engineering**: the golden repo isn't just
 3. **Coding agent** — assign an issue to **@copilot** and it creates a branch, writes the change, and opens a PR — *following copilot-instructions.md and DESIGN-RULES.md*.
 4. **PR review** — Copilot reviews PRs when enabled (repo Settings → Copilot), plus this repo's own design-rules checklist bot.
 
+## Licensing — what you actually need
+
+Good news: there's almost always a way in.
+
+- **GitHub Copilot Free** — no credit card, no trial trickery: ~2,000 code completions per month plus limited chat and agent access. Since June 2026, usage is metered as **GitHub AI Credits** (token-based) rather than per-request counts.
+- **Copilot Pro / Pro+** — for daily driving: more credits, more models.
+- **Copilot Business / Enterprise** — per-user credit pools (1,900 / 3,900 AI Credits), org-wide policy control, and admin toggles for the coding agent.
+- **The coding agent** (@copilot on issues) needs an admin to enable it for the repo or organization — it's a setting, not just a license.
+
+So: most developers either already have a license through work, or can start on the free tier to explore. And remember — this repo's **PR review bot and ALM pipeline run on plain GitHub Actions** and work for everyone, licensed or not.
+
 ## Try it yourself (post-workshop)
 
 1. Open a GitHub issue: *"Add a gldCustomer table with gldCustomerName, gldEmail, gldPhone following DESIGN-RULES.md."*
@@ -48,6 +59,7 @@ This is the pattern known as **context engineering**: the golden repo isn't just
 
 ## Where to go deeper
 
+- [Copilot plans & licensing](https://docs.github.com/en/copilot/get-started/plans)
 - [Copilot coding agent documentation](https://docs.github.com/en/copilot/concepts/agents/coding-agent)
 - [Best practices for Copilot coding agent](https://docs.github.com/en/copilot/concepts/agents/best-practices-for-using-copilot-to-work-on-tasks-and-review-code)
 - [AGENTS.md convention](https://agents.md/)
