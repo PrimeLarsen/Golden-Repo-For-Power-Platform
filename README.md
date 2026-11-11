@@ -23,6 +23,7 @@ Without templates, every project starts from zero — new colors, new names, new
 | `docs/03-exercise-1.md` | Exercise 1: New project from the template |
 | `docs/04-exercise-2.md` | Exercise 2: Design rules + Solution Checker |
 | `docs/05-exercise-3.md` | Exercise 3 (optional): CI pipeline with GitHub Actions |
+| `docs/06-cicd-and-branches.md` | 📖 Read-after: CI/CD & branching basics |
 | `scripts/pac-cheatsheet.md` | The PAC CLI commands you'll use today |
 | `.github/workflows/` | Example ALM pipeline for ongoing use |
 
@@ -34,6 +35,8 @@ Without templates, every project starts from zero — new colors, new names, new
 4. **Exercise 2** (20 min) — design rules + Solution Checker: [docs/04](docs/04-exercise-2.md)
 5. **Exercise 3** (20 min, optional) — CI pipeline: [docs/05](docs/05-exercise-3.md)
 6. **Wrap-up** (5–10 min) — how do you take this home? Discussion.
+
+📖 **Homework / further reading:** [CI/CD & branches — a short read](docs/06-cicd-and-branches.md)
 
 ## Prerequisites
 
