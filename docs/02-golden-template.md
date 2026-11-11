@@ -1,34 +1,34 @@
-# 02 · Hvad er en Golden Solution? 🏆
+# 02 · What is a Golden Solution? 🏆
 
-En **golden solution** er en tom, men velbygget base: alt det kedelige, der skal gøres rigtigt i hvert projekt, allerede er gjort.
+A **golden solution** is an empty but well-built base: all the boring stuff that has to be done right in every project is already done.
 
-## Hvad indeholder GoldenBase?
+## What's inside GoldenBase?
 
-| Kategori | Indhold |
+| Category | Contents |
 |---|---|
-| **Designsystem** | Komponentbibliotek med knapper, headers, cards, ikoner, farvevariabler |
-| **Konfiguration** | Miljøvariabler (API-URL, SharePoint-site) og connection references |
-| **Datamodel** | Fælles tabeller: organisationer, brugere, log |
-| **Utilities** | Genanvendelige flows: fejlhåndtering, notifikationer, audit-log |
-| **App-shell** | Canvas-app med navigation, header og "tom" formular |
+| **Design system** | Component library with buttons, headers, cards, icons, color variables |
+| **Configuration** | Environment variables (API URL, SharePoint site) and connection references |
+| **Data model** | Shared tables: organizations, users, log |
+| **Utilities** | Reusable flows: error handling, notifications, audit logging |
+| **App shell** | Canvas app with navigation, header, and an "empty" form |
 
-## Flowet: fra skabelon til projekt
+## The flow: from template to project
 
 ```mermaid
 flowchart LR
-    A[GoldenBase-skabelon\n(this repo)] --> B[Øvelse 1:\nnegotiate kopi til dev]
-    B --> C[Byg projektet\novenpå basen]
-    C --> D[Øvelse 2:\nChecker + designregler]
-    D --> E[Øvelse 3:\nCI/CD pipeline]
+    A[GoldenBase template\n(this repo)] --> B[Exercise 1:\nclone copy to dev]
+    B --> C[Build the project\non top of the base]
+    C --> D[Exercise 2:\nChecker + design rules]
+    D --> E[Exercise 3:\nCI/CD pipeline]
     E --> F[Test/Prod\n(managed)]
 ```
 
-## Hvorfor ikke bare kopiere appen?
+## Why not just copy the app?
 
-- Kopier du en app, duplikerer du fejl — og designdrift.
-- Refererer du til en managed base, arver alle projekter rettelser i én opdatering.
-- Solutions er ALM-enheden: eksport, import, deployment — alt handler om solutions, ikke apps.
+- Copy an app and you duplicate bugs — and design drift.
+- Reference a managed base and every project inherits fixes in one update.
+- Solutions are the ALM unit: export, import, deployment — it's all about solutions, not apps.
 
-## Princippet
+## The principle
 
-> **Byg kassen færdig én gang. Lever i kassen. Byg kun det, der er unikt for projektet.**
+> **Build the box once. Live in the box. Only build what's unique to the project.**

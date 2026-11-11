@@ -1,46 +1,46 @@
 # Golden Repo — Power Platform 🏆
 
-Hands-on workshop (60–90 min): **Byg et "Golden Repo" med solution templates, designregler og genbrug på tværs af projekter.**
+Hands-on workshop (60–90 min): **Build a "Golden Repo" with solution templates, design rules, and cross-project reuse.**
 
-Målgruppe: Power Platform-udviklere (primært) og makers, der vil have struktur, genbrug og kvalitet i deres projekter.
+Audience: Power Platform developers (primarily) and makers who want structure, reuse, and quality in their projects.
 
-## Hvorfor et Golden Repo?
+## Why a Golden Repo?
 
-Uden skabeloner starter hvert projekt fra nul — nye farver, nye navne, nye (dårlige) vaner. Med et Golden Repo får I:
+Without templates, every project starts from zero — new colors, new names, new (bad) habits. With a Golden Repo you get:
 
-- **Fart**: Nyt projekt = klone skabelon, pakke ud, bygge videre. Timer sparet hver gang.
-- **Kvalitet**: Designregler, navngivning og Solution Checker er "bagt ind" fra dag ét.
-- **Genbrug**: Komponentbiblioteker, miljøvariabler og connections defineres én gang.
-- **ALM**: Samme eksport/import-flow i alle projekter, klar til CI/CD.
+- **Speed**: New project = clone the template, unpack, build on top. Hours saved every time.
+- **Quality**: Design rules, naming, and the Solution Checker are "baked in" from day one.
+- **Reuse**: Component libraries, environment variables, and connections are defined once.
+- **ALM**: The same export/import flow in every project, ready for CI/CD.
 
-## Repo-oversigt
+## Repo overview
 
-| Sti | Indhold |
+| Path | Contents |
 |---|---|
-| `DESIGN-RULES.md` | Design- og navngivningsregler (vores "lo") |
-| `docs/01-klargoring.md` | Opsætning: PAC CLI, auth, klone repo |
-| `docs/02-golden-template.md` | Hvad indeholder golden solution-skabelonen? |
-| `docs/03-oevelse-1.md` | Øvelse 1: Nyt projekt fra skabelonen |
-| `docs/04-oevelse-2.md` | Øvelse 2: Designregler + Solution Checker |
-| `docs/05-oevelse-3.md` | Øvelse 3 (valgfri): CI-pipeline med GitHub Actions |
-| `scripts/pac-cheatsheet.md` | PAC CLI-kommandoer du skal bruge i dag |
-| `.github/workflows/` | Eksempel på ALM-pipeline til løbende brug |
+| `DESIGN-RULES.md` | Design & naming rules (our "law") |
+| `docs/01-setup.md` | Setup: PAC CLI, auth, cloning the repo |
+| `docs/02-golden-template.md` | What's inside the golden solution template? |
+| `docs/03-exercise-1.md` | Exercise 1: New project from the template |
+| `docs/04-exercise-2.md` | Exercise 2: Design rules + Solution Checker |
+| `docs/05-exercise-3.md` | Exercise 3 (optional): CI pipeline with GitHub Actions |
+| `scripts/pac-cheatsheet.md` | The PAC CLI commands you'll use today |
+| `.github/workflows/` | Example ALM pipeline for ongoing use |
 
 ## Agenda (60–90 min)
 
-1. **Intro** (10 min) — hvorfor genbrug beats genopfindelse: [docs/02](docs/02-golden-template.md)
-2. **Klargøring** (10 min) — PAC CLI + auth: [docs/01](docs/01-klargoring.md)
-3. **Øvelse 1** (20 min) — nyt projekt fra golden template: [docs/03](docs/03-oevelse-1.md)
-4. **Øvelse 2** (20 min) — designregler + Solution Checker: [docs/04](docs/04-oevelse-2.md)
-5. **Øvelse 3** (20 min, valgfri) — CI-pipeline: [docs/05](docs/05-oevelse-3.md)
-6. **Wrap-up** (5–10 min) — hvordan tager I dette med hjem? Diskussion.
+1. **Intro** (10 min) — why reuse beats reinvention: [docs/02](docs/02-golden-template.md)
+2. **Setup** (10 min) — PAC CLI + auth: [docs/01](docs/01-setup.md)
+3. **Exercise 1** (20 min) — new project from the golden template: [docs/03](docs/03-exercise-1.md)
+4. **Exercise 2** (20 min) — design rules + Solution Checker: [docs/04](docs/04-exercise-2.md)
+5. **Exercise 3** (20 min, optional) — CI pipeline: [docs/05](docs/05-exercise-3.md)
+6. **Wrap-up** (5–10 min) — how do you take this home? Discussion.
 
-## Forudsætninger
+## Prerequisites
 
-- En Power Platform-udviklerlicens (og adgang til et dev-environment)
-- Git installeret
-- Power Platform CLI (PAC) — se [docs/01](docs/01-klargoring.md)
+- A Power Platform developer license (and access to a dev environment)
+- Git installed
+- Power Platform CLI (PAC) — see [docs/01](docs/01-setup.md)
 
-## Huskereglen
+## The golden rule
 
-> *"Alt hvad der gentager sig, hører hjemme i golden repo. Alt hvad du hardcoder, kommer til at genere dig senere."*
+> *"Everything that repeats belongs in the golden repo. Everything you hardcode will come back to haunt you."*

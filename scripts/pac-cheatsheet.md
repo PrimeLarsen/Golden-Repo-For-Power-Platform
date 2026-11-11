@@ -1,32 +1,32 @@
-# PAC CLI — snydeark 📋
+# PAC CLI — cheat sheet 📋
 
-Alle kommandoer fra workshoppen samlet ét sted.
+All the workshop commands in one place.
 
 ## Auth
 
 ```bash
-pac auth create --url https://ditorg.crm4.dynamics.com   # log ind
-pac auth list                                          # se forbindelser
-pac auth select --index 2                              # skift aktiv
+pac auth create --url https://yourorg.crm4.dynamics.com   # sign in
+pac auth list                                            # list connections
+pac auth select --index 2                                # switch active
 ```
 
-## Solutions — ALM-flowet
+## Solutions — the ALM flow
 
 ```bash
-pac solution list                                      # se alle i environmentet
+pac solution list                                        # list all in the environment
 pac solution create --name X --publisher-name Y --publisher-prefix z
-pac solution export --name X --path ./artifacts/        # exportér som zip
+pac solution export --name X --path ./artifacts/          # export as zip
 pac solution unpack --zipfile X.zip --folder ./src/X --allowDelete
 pac solution pack --folder ./src/X --zipfile X.zip --managed true
-pac solution import --file X.zip                       # importér igen
-pac solution check --path X.zip                         # Solution Checker
+pac solution import --file X.zip                          # import it back
+pac solution check --path X.zip                           # Solution Checker
 ```
 
-## Online-hjælp
+## Help
 
 ```bash
 pac help
 pac solution help
 ```
 
-> **Tip:** `pac` kan bruges i GitHub Actions via `microsoft/powerplatform-actions` — samme kommandoer, bare i pipeline.
+> **Tip:** `pac` can be used in GitHub Actions via `microsoft/powerplatform-actions` — the same commands, just in a pipeline.

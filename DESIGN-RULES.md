@@ -1,51 +1,51 @@
-# Designregler — vores "golden lo" 📐
+# Design Rules — our "golden law" 📐
 
-Disse regler gælder for alt, der bygges på tværs af projekter. De er ikke eksklusive — de er minimumsstandarden.
+These rules apply to everything built across projects. They are not exhaustive — they are the minimum standard.
 
-## 1. Navngivning
+## 1. Naming
 
-| Objekt | Regel | Eksempel |
+| Object | Rule | Example |
 |---|---|---|
-| Publisher | Fast virksomhedspublisher med prefix `gld` | `gld` |
-| Løsning (solution) | `GoldenBase` (skabelon) / `Projektnavn_Feature` | `Kundportal_Bestilling` |
-| Canvas-app | `app` + domæne | `appKundportal` |
-| Model-driven | `mdd` + domæne | `mddKundportal` |
-| Flow | `flow` + proces | `flowSendOrdrebekraftelse` |
-| Dataverse-tabel | prefix + ental, CamelCase | `gldOrdre` |
-| Kolonne | prefix + navn | `gldOrdrestatus` |
-| Miljøvariabel | `var` + navn | `varApiUrl` |
+| Publisher | Fixed company publisher with prefix `gld` | `gld` |
+| Solution | `GoldenBase` (template) / `ProjectName_Feature` | `CustomerPortal_Ordering` |
+| Canvas app | `app` + domain | `appCustomerPortal` |
+| Model-driven app | `mdd` + domain | `mddCustomerPortal` |
+| Flow | `flow` + process | `flowSendOrderConfirmation` |
+| Dataverse table | prefix + singular, CamelCase | `gldOrder` |
+| Column | prefix + name | `gldOrderStatus` |
+| Environment variable | `var` + name | `varApiUrl` |
 
-- Fysiske navne (**Name**) er tekniske, visningsnavne (**DisplayName**) er menneskelige.
-- Ingen mellemrum, æøå eller specialtegn i fysiske navne.
+- Physical names (**Name**) are technical; display names (**DisplayName**) are human.
+- No spaces, special characters, or non-ASCII letters in physical names.
 
-## 2. Solution-struktur
+## 2. Solution structure
 
-- **GoldenBase** (managed i prod): designsystem, komponentbibliotek, miljøvariabler, connection references, delte tabeller.
-- **Projekt-solutions**: kun det specifikke projekt. Afhænger af GoldenBase — aldrig kopier indhold, altid referer.
-- Ingenting bygges i **Default**-environment. Brug dedikerede dev/test/prod environments.
+- **GoldenBase** (managed in prod): design system, component library, environment variables, connection references, shared tables.
+- **Project solutions**: only the specific project's content. They depend on GoldenBase — never copy content, always reference it.
+- Nothing gets built in the **Default** environment. Use dedicated dev/test/prod environments.
 
-## 3. Visuel design (Canvas-apps)
+## 3. Visual design (Canvas apps)
 
-- **Font**: Segoe UI (standard) — ingen andre fonte uden aftale.
-- **Skema**: Ét farvesystem, defineret i komponentbiblioteket:
-  - Primær: `#0B5394` • Sekundær: `#3D85C6` • Baggrund: `#F5F5F5` • Tekst: `#202124` • Success: `#2E7D32` • Advarsel: `#F9A825` • Fejl: `#C5221F`
-- **Sizing**: Header 60px, indre margin 20px, gap mellem elementer 12px.
-- **Responsive**: Altid flexible containers + formulas — aldrig fast pixel-layout på skærme.
-- Knapper, headers, cards og ikoner tages fra **komponentbiblioteket** — der bygges ikke nye varianter "hovs"-kreativt.
+- **Font**: Segui UI — actually: **Segoe UI** (the default) — no other fonts without agreement.
+- **Palette**: One color system, defined in the component library:
+  - Primary: `#0B5394` • Secondary: `#3D85C6` • Background: `#F5F5F5` • Text: `#202124` • Success: `#2E7D32` • Warning: `#F9A825` • Error: `#C5221F`
+- **Sizing**: header 60px, inner margin 20px, gap between elements 12px.
+- **Responsive**: always flexible containers + formulas — never fixed pixel layout on screens.
+- Buttons, headers, cards, and icons come from the **component library** — no improvised new variants.
 
-## 4. Konfiguration
+## 4. Configuration
 
-- **Miljøvariabler** til alt miljøafhængigt: API-URL'er, SharePoint-sites, parametre.
-- **Connection references** til alle connections — aldrig inline-connections i flows.
-- Ingen hemmeligheder, tokens eller personlige konti i flows — kun servicekonti der deles korrekt.
+- **Environment variables** for anything environment-specific: API URLs, SharePoint sites, parameters.
+- **Connection references** for all connections — never inline connections in flows.
+- No secrets, tokens, or personal accounts in flows — only properly shared service accounts.
 
-## 5. Kvalitetsregler
+## 5. Quality rules
 
-- **Solution Checker** skal køre grønt (0 critical) før import til test.
-- Ingen business logic i on-change flows, hvor formel-datakilder kan bruges.
-- Alt, der rører produktion, er **managed**. Unmanaged findes kun i dev.
+- **Solution Checker** must run green (0 critical) before importing to test.
+- No business logic in on-change flows where formula data sources can do the job.
+- Everything touching production is **managed**. Unmanaged exists only in dev.
 
-## 6. Versionering
+## 6. Versioning
 
-- Skabelonen har en version i `GoldenBase`-beskrivelsen (semver).
-- Ændringer i skabelonen → pull request → review → ny version → release notes i denne repo.
+- The template has a version in the `GoldenBase` description (semver).
+- Template changes → pull request → review → new version → release notes in this repo.

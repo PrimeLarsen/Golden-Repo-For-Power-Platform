@@ -15,21 +15,21 @@ jobs:
       - name: Pack managed solution
         uses: microsoft/powerplatform-actions/pack-solution@v1
         with:
-          solution-folder: src/ProjektKundportal
-          solution-file: artifacts/ProjektKundportal_managed.zip
+          solution-folder: src/ProjectCustomerPortal
+          solution-file: artifacts/ProjectCustomerPortal_managed.zip
           solution-type: Managed
 
       - name: Solution Checker
         uses: microsoft/powerplatform-actions/check-solution@v1
         with:
-          solution-file: artifacts/ProjektKundportal_managed.zip
+          solution-file: artifacts/ProjectCustomerPortal_managed.zip
 
-      - name: Import til test
+      - name: Import to test
         uses: microsoft/powerplatform-actions/import-solution@v1
         with:
           environment-url: ${{ secrets.POWERPLATFORM_URL }}
           tenant-id: ${{ secrets.POWERPLATFORM_TENANT_ID }}
           app-id: ${{ secrets.POWERPLATFORM_CLIENT_ID }}
           client-secret: ${{ secrets.POWERPLATFORM_CLIENT_SECRET }}
-          solution-file: artifacts/ProjektKundportal_managed.zip
+          solution-file: artifacts/ProjectCustomerPortal_managed.zip
           run-asynchronously: true
