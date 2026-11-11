@@ -1,0 +1,37 @@
+name: Design Rules PR Review
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  design-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post design rules checklist
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = [
+              '## 🤖 Golden Repo — design rules checklist',
+              '',
+              'Please confirm this PR follows [DESIGN-RULES.md](../blob/main/DESIGN-RULES.md):',
+              '',
+              '- [ ] Naming conventions followed (gld prefix, app/flow/mdd conventions)',
+              '- [ ] Colors & font from the golden palette',
+              '- [ ] Components reused from the GoldenBase library (no new variants)',
+              '- [ ] No hardcoded config — environment variables & connection references only',
+              '- [ ] Solution exported/unpacked and committed to src/',
+              '- [ ] Solution Checker run with 0 critical findings',
+              '',
+              'Keep PRs small: one solution change per PR. See [docs/06-cicd-and-branches.md](../blob/main/docs/06-cicd-and-branches.md).'
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
